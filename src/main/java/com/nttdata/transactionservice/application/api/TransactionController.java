@@ -1,7 +1,7 @@
-package com.nttdata.transactionservice.api;
+package com.nttdata.transactionservice.application.api;
 
-import com.nttdata.transactionservice.model.document.Transaction;
-import com.nttdata.transactionservice.model.service.TransactionService;
+import com.nttdata.transactionservice.infrastructure.document.Transaction;
+import com.nttdata.transactionservice.infrastructure.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,7 +29,7 @@ public class TransactionController {
 
   @GetMapping("/{id}")
   private Flux<Transaction> getTransactionsById(@PathVariable("id") String id) {
-    return transactionService.getTransactionsById(id);
+    return transactionService.getTransactionsByAccountId(id);
   }
 
   @PostMapping("/{product}")

@@ -1,4 +1,4 @@
-package com.nttdata.transactionservice.model.dto;
+package com.nttdata.transactionservice.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,10 +9,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreditDTO {
+public class BankAccountDTO {
 
     private String id;
-    private String creditAccount;
+    private String account;
     private float amount;
-    private float limit;
 }
