@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import reactor.core.publisher.Mono;
 
-@FeignClient(value = "product-service" , url = "localhost:8092")
+@FeignClient(value = "product-service" , url = "https://product-service-bootcamp.azurewebsites.net")
 public interface ProductClient {
 
     @GetMapping("/bankAccounts/{id}")
